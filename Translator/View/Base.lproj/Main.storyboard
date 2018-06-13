@@ -9,7 +9,7 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--Translate-->
+        <!--Google-Translator-->
         <scene sceneID="tne-QT-ifu">
             <objects>
                 <viewController id="BYZ-38-t0r" customClass="TranslatorViewController" customModule="Translator" customModuleProvider="target" sceneMemberID="viewController">
@@ -29,6 +29,7 @@
                             </textField>
                             <pickerView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="WRe-qA-T1i">
                                 <rect key="frame" x="0.0" y="451" width="375" height="216"/>
+                                <color key="backgroundColor" red="1" green="0.83234566450000003" blue="0.47320586440000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <connections>
                                     <outlet property="dataSource" destination="BYZ-38-t0r" id="1qA-Rp-1lZ"/>
                                     <outlet property="delegate" destination="BYZ-38-t0r" id="VlX-V8-3K6"/>
@@ -63,7 +64,7 @@
                                 <nil key="highlightedColor"/>
                             </label>
                         </subviews>
-                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="NpA-Ll-Ejj" secondAttribute="trailing" constant="16" id="28U-Uf-jPp"/>
                             <constraint firstItem="WRe-qA-T1i" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="5KZ-hT-Hgm"/>
@@ -87,7 +88,7 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
-                    <navigationItem key="navigationItem" title="Translate" id="S6T-Mu-btw"/>
+                    <navigationItem key="navigationItem" title="Google-Translator" id="S6T-Mu-btw"/>
                     <connections>
                         <outlet property="activityIndicator" destination="9uQ-xE-HFP" id="uPj-dx-RmF"/>
                         <outlet property="languagePicker" destination="WRe-qA-T1i" id="Fur-67-RKL"/>
@@ -108,6 +109,10 @@
                     <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="Als-IJ-abX">
                         <rect key="frame" x="0.0" y="20" width="375" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
+                        <color key="barTintColor" red="1" green="0.50196081400000003" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                        <textAttributes key="titleTextAttributes">
+                            <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        </textAttributes>
                     </navigationBar>
                     <nil name="viewControllers"/>
                     <connections>

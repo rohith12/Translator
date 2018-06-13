@@ -14,28 +14,24 @@ import SwiftyJSON
 class Services {
     
    let baseUrl = "https://translation.googleapis.com"
-   let translateUrl = "/language/translate/v2?key={AIzaSyCfuGXrN3DTkLRBuPkGPtWSvvtHhImqoJs}"
+   let translateUrl = "/language/translate/v2"
    
-    func translateText(source: String, target: String, text: String,completion: @escaping ([String:String]) -> Void){
-        
+  func translateText(source: String, target: String, text: String,completion: @escaping ([String:String]) -> Void){
 
     let parameters: Parameters = ["key":"AIzaSyCfuGXrN3DTkLRBuPkGPtWSvvtHhImqoJs","q":text,"source":"en","target":target]
 
-      Alamofire.request("https://translation.googleapis.com/language/translate/v2", method: .post, parameters: parameters).responseJSON { response in
-        
+    let url = baseUrl + translateUrl
+    
+      Alamofire.request(url, method: .post, parameters: parameters).responseJSON { response in
         if response.result.isSuccess{
             
             let json = JSON(response.result.value!)
             let res = self.extractTranslatedText(dict: json)
             completion(["success": res])
-            
+        
         }else{
-            print("error:\(String(describing: response.result.error.debugDescription))")
             completion(["error": String(describing: response.result.error.debugDescription)])
-
         }
-        
-        
       }
     
     }
