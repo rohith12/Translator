@@ -39,18 +39,36 @@
                                     <action selector="targetLanguageSelectorAction:" destination="BYZ-38-t0r" eventType="touchUpInside" id="eLH-Iq-xZ3"/>
                                 </connections>
                             </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="kNK-7g-BhO">
+                                <rect key="frame" x="16" y="284" width="343" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="GeT-mh-Fmo">
+                                <rect key="frame" x="155.5" y="225" width="63" height="30"/>
+                                <state key="normal" title="Translate"/>
+                                <connections>
+                                    <action selector="TranslateAction:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Kgk-hy-9q2"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="NpA-Ll-Ejj" secondAttribute="trailing" constant="16" id="28U-Uf-jPp"/>
                             <constraint firstItem="WRe-qA-T1i" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="5KZ-hT-Hgm"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="kNK-7g-BhO" secondAttribute="trailing" constant="16" id="9mI-X8-KP3"/>
+                            <constraint firstItem="kNK-7g-BhO" firstAttribute="top" secondItem="GeT-mh-Fmo" secondAttribute="bottom" constant="29" id="FBD-GW-7b5"/>
                             <constraint firstItem="WRe-qA-T1i" firstAttribute="bottom" secondItem="6Tk-OE-BBY" secondAttribute="bottom" id="Tg1-mc-pDp"/>
                             <constraint firstItem="NpA-Ll-Ejj" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="16" id="VHp-uf-5oO"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="icr-3Z-Ntu" secondAttribute="trailing" constant="16" id="W8C-cM-0t7"/>
                             <constraint firstItem="NpA-Ll-Ejj" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="35" id="WHX-j0-fRI"/>
                             <constraint firstItem="icr-3Z-Ntu" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="16" id="XLV-sf-d4b"/>
                             <constraint firstItem="WRe-qA-T1i" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" id="Xxk-KW-nYa"/>
+                            <constraint firstItem="GeT-mh-Fmo" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="ZxW-Gp-bbb"/>
                             <constraint firstItem="icr-3Z-Ntu" firstAttribute="top" secondItem="NpA-Ll-Ejj" secondAttribute="bottom" constant="26" id="fbH-a3-b9k"/>
+                            <constraint firstItem="GeT-mh-Fmo" firstAttribute="top" secondItem="icr-3Z-Ntu" secondAttribute="bottom" constant="40" id="i3j-IM-FYu"/>
+                            <constraint firstItem="kNK-7g-BhO" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="16" id="t6K-ug-Ww1"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
@@ -59,6 +77,7 @@
                         <outlet property="languagePicker" destination="WRe-qA-T1i" id="Fur-67-RKL"/>
                         <outlet property="sourceTextfield" destination="NpA-Ll-Ejj" id="DkT-Nv-JLt"/>
                         <outlet property="targetLanguageButtonOutlet" destination="icr-3Z-Ntu" id="Vjq-B0-miz"/>
+                        <outlet property="translatedLabelResult" destination="kNK-7g-BhO" id="Lle-72-iEu"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
