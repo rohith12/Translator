@@ -16,6 +16,9 @@ class TranslatorViewController: UIViewController {
     var languages = [String]()
     @IBOutlet weak var targetLanguageButtonOutlet: UIButton!
     
+    @IBOutlet weak var translatedLabelResult: UILabel!
+    
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         languagePicker.isHidden = true
@@ -33,6 +36,11 @@ class TranslatorViewController: UIViewController {
         languagePicker.isHidden = false
     }
     
+    @IBAction func TranslateAction(_ sender: Any) {
+        
+        
+        
+    }
     
 
 }
