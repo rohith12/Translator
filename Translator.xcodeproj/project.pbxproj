@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		2CADC76931CE0BA758328478 /* Pods_Translator.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C7139F8A697404E36153BBEF /* Pods_Translator.framework */; };
+		3840A98E20D1926D00751C87 /* Services.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3840A98D20D1926D00751C87 /* Services.swift */; };
 		38C7E03720D155CD007624E9 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 38C7E03620D155CD007624E9 /* AppDelegate.swift */; };
 		38C7E03C20D155CD007624E9 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 38C7E03A20D155CD007624E9 /* Main.storyboard */; };
 		38C7E03E20D155CD007624E9 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 38C7E03D20D155CD007624E9 /* Assets.xcassets */; };
@@ -31,6 +32,7 @@
 /* Begin PBXFileReference section */
 		038394C6DDB2B889BBDCDFEC /* Pods-Translator.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Translator.release.xcconfig"; path = "Pods/Target Support Files/Pods-Translator/Pods-Translator.release.xcconfig"; sourceTree = "<group>"; };
 		10A2CAE944A5BF38C4E0DB12 /* Pods_TranslatorTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_TranslatorTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		3840A98D20D1926D00751C87 /* Services.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Services.swift; sourceTree = "<group>"; };
 		38C7E03320D155CD007624E9 /* Translator.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Translator.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		38C7E03620D155CD007624E9 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		38C7E03B20D155CD007624E9 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -77,6 +79,14 @@
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
+		3840A98C20D1925400751C87 /* Services */ = {
+			isa = PBXGroup;
+			children = (
+				3840A98D20D1926D00751C87 /* Services.swift */,
+			);
+			path = Services;
+			sourceTree = "<group>";
+		};
 		38C7E02A20D155CD007624E9 = {
 			isa = PBXGroup;
 			children = (
@@ -104,6 +114,7 @@
 				38C7E05C20D15960007624E9 /* Model */,
 				38C7E05920D157F5007624E9 /* Controller */,
 				38C7E05820D157EE007624E9 /* View */,
+				3840A98C20D1925400751C87 /* Services */,
 				38C7E04220D155CD007624E9 /* Info.plist */,
 			);
 			path = Translator;
@@ -321,6 +332,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				38C7E06020D159B3007624E9 /* languageModel.swift in Sources */,
+				3840A98E20D1926D00751C87 /* Services.swift in Sources */,
 				38C7E05B20D15877007624E9 /* TranslatorViewController.swift in Sources */,
 				38C7E03720D155CD007624E9 /* AppDelegate.swift in Sources */,
 			);

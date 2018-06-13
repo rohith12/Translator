@@ -17,6 +17,10 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
+                            <activityIndicatorView hidden="YES" opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" hidesWhenStopped="YES" style="whiteLarge" translatesAutoresizingMaskIntoConstraints="NO" id="9uQ-xE-HFP">
+                                <rect key="frame" x="169" y="286" width="37" height="37"/>
+                                <color key="color" red="0.12984204290000001" green="0.12984612579999999" blue="0.12984395030000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                            </activityIndicatorView>
                             <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Enter text you want to translate" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="NpA-Ll-Ejj">
                                 <rect key="frame" x="16" y="99" width="343" height="30"/>
                                 <nil key="textColor"/>
@@ -40,7 +44,7 @@
                                 </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="kNK-7g-BhO">
-                                <rect key="frame" x="16" y="284" width="343" height="21"/>
+                                <rect key="frame" x="16" y="300" width="343" height="21"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
@@ -52,13 +56,21 @@
                                     <action selector="TranslateAction:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Kgk-hy-9q2"/>
                                 </connections>
                             </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Translated text" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="KmJ-bA-eKs">
+                                <rect key="frame" x="16" y="268" width="343" height="18"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="NpA-Ll-Ejj" secondAttribute="trailing" constant="16" id="28U-Uf-jPp"/>
                             <constraint firstItem="WRe-qA-T1i" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="5KZ-hT-Hgm"/>
-                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="kNK-7g-BhO" secondAttribute="trailing" constant="16" id="9mI-X8-KP3"/>
-                            <constraint firstItem="kNK-7g-BhO" firstAttribute="top" secondItem="GeT-mh-Fmo" secondAttribute="bottom" constant="29" id="FBD-GW-7b5"/>
+                            <constraint firstItem="KmJ-bA-eKs" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="16" id="Es8-v8-Eps"/>
+                            <constraint firstItem="kNK-7g-BhO" firstAttribute="top" secondItem="KmJ-bA-eKs" secondAttribute="bottom" constant="14" id="FJC-5Y-0wT"/>
+                            <constraint firstItem="9uQ-xE-HFP" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="Mej-Ip-02n"/>
+                            <constraint firstItem="kNK-7g-BhO" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="16" id="Rhq-JY-Kad"/>
                             <constraint firstItem="WRe-qA-T1i" firstAttribute="bottom" secondItem="6Tk-OE-BBY" secondAttribute="bottom" id="Tg1-mc-pDp"/>
                             <constraint firstItem="NpA-Ll-Ejj" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="16" id="VHp-uf-5oO"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="icr-3Z-Ntu" secondAttribute="trailing" constant="16" id="W8C-cM-0t7"/>
@@ -66,14 +78,18 @@
                             <constraint firstItem="icr-3Z-Ntu" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="16" id="XLV-sf-d4b"/>
                             <constraint firstItem="WRe-qA-T1i" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" id="Xxk-KW-nYa"/>
                             <constraint firstItem="GeT-mh-Fmo" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="ZxW-Gp-bbb"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="kNK-7g-BhO" secondAttribute="trailing" constant="16" id="du8-8i-8I4"/>
                             <constraint firstItem="icr-3Z-Ntu" firstAttribute="top" secondItem="NpA-Ll-Ejj" secondAttribute="bottom" constant="26" id="fbH-a3-b9k"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="KmJ-bA-eKs" secondAttribute="trailing" constant="16" id="hc5-MW-h7P"/>
                             <constraint firstItem="GeT-mh-Fmo" firstAttribute="top" secondItem="icr-3Z-Ntu" secondAttribute="bottom" constant="40" id="i3j-IM-FYu"/>
-                            <constraint firstItem="kNK-7g-BhO" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="16" id="t6K-ug-Ww1"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="top" secondItem="9uQ-xE-HFP" secondAttribute="bottom" constant="-259" id="jE0-MU-t78"/>
+                            <constraint firstItem="KmJ-bA-eKs" firstAttribute="top" secondItem="GeT-mh-Fmo" secondAttribute="bottom" constant="13" id="x2C-Yz-57H"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
                     <navigationItem key="navigationItem" title="Translate" id="S6T-Mu-btw"/>
                     <connections>
+                        <outlet property="activityIndicator" destination="9uQ-xE-HFP" id="uPj-dx-RmF"/>
                         <outlet property="languagePicker" destination="WRe-qA-T1i" id="Fur-67-RKL"/>
                         <outlet property="sourceTextfield" destination="NpA-Ll-Ejj" id="DkT-Nv-JLt"/>
                         <outlet property="targetLanguageButtonOutlet" destination="icr-3Z-Ntu" id="Vjq-B0-miz"/>
