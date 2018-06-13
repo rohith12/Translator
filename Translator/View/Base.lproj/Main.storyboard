@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13196" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="a8W-FJ-8wL">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13174"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Translate-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="TranslatorViewController" customModule="Translator" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Enter text you want to translate" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="NpA-Ll-Ejj">
+                                <rect key="frame" x="16" y="99" width="343" height="30"/>
+                                <nil key="textColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <pickerView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="WRe-qA-T1i">
+                                <rect key="frame" x="0.0" y="451" width="375" height="216"/>
+                                <connections>
+                                    <outlet property="dataSource" destination="BYZ-38-t0r" id="1qA-Rp-1lZ"/>
+                                    <outlet property="delegate" destination="BYZ-38-t0r" id="VlX-V8-3K6"/>
+                                </connections>
+                            </pickerView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="icr-3Z-Ntu">
+                                <rect key="frame" x="16" y="155" width="343" height="30"/>
+                                <state key="normal" title="Select a target Language">
+                                    <color key="titleColor" red="0.4756349325" green="0.47564673419999998" blue="0.47564041610000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                </state>
+                                <connections>
+                                    <action selector="targetLanguageSelectorAction:" destination="BYZ-38-t0r" eventType="touchUpInside" id="eLH-Iq-xZ3"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="NpA-Ll-Ejj" secondAttribute="trailing" constant="16" id="28U-Uf-jPp"/>
+                            <constraint firstItem="WRe-qA-T1i" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="5KZ-hT-Hgm"/>
+                            <constraint firstItem="WRe-qA-T1i" firstAttribute="bottom" secondItem="6Tk-OE-BBY" secondAttribute="bottom" id="Tg1-mc-pDp"/>
+                            <constraint firstItem="NpA-Ll-Ejj" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="16" id="VHp-uf-5oO"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="icr-3Z-Ntu" secondAttribute="trailing" constant="16" id="W8C-cM-0t7"/>
+                            <constraint firstItem="NpA-Ll-Ejj" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="35" id="WHX-j0-fRI"/>
+                            <constraint firstItem="icr-3Z-Ntu" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="16" id="XLV-sf-d4b"/>
+                            <constraint firstItem="WRe-qA-T1i" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" id="Xxk-KW-nYa"/>
+                            <constraint firstItem="icr-3Z-Ntu" firstAttribute="top" secondItem="NpA-Ll-Ejj" secondAttribute="bottom" constant="26" id="fbH-a3-b9k"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                    </view>
+                    <navigationItem key="navigationItem" title="Translate" id="S6T-Mu-btw"/>
+                    <connections>
+                        <outlet property="languagePicker" destination="WRe-qA-T1i" id="Fur-67-RKL"/>
+                        <outlet property="sourceTextfield" destination="NpA-Ll-Ejj" id="DkT-Nv-JLt"/>
+                        <outlet property="targetLanguageButtonOutlet" destination="icr-3Z-Ntu" id="Vjq-B0-miz"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="372" y="70.614692653673174"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="VtY-cn-F7H">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="a8W-FJ-8wL" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="Als-IJ-abX">
+                        <rect key="frame" x="0.0" y="20" width="375" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="BYZ-38-t0r" kind="relationship" relationship="rootViewController" id="Yyl-a7-5o4"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="xLm-sY-Gnm" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-396" y="71"/>
+        </scene>
+    </scenes>
+</document>
